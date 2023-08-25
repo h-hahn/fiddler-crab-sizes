@@ -22,5 +22,6 @@ summary_crabs <- pie_crab %>%
   group_by(site) %>% 
   summarise(mean_size = round(mean(size), 2),
             sd_size = round(sd(size),2),
-            count = n())
+            count = n()) %>% 
+  rename(mean_size_mm = mean_size)
 ```
