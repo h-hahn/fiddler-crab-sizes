@@ -1,0 +1,9 @@
+---
+title: "eds221-day10-collab"
+format: html
+editor: visual
+---
+
+```{r}
+library(lterdatasampler)
+```
