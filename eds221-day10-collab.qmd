@@ -2,6 +2,8 @@
 title: "eds221-day10-collab"
 format: html
 editor: visual
+execute: 
+  echo: FALSE
 ---
 
 ```{r}
@@ -10,6 +12,15 @@ library(tidyverse)
 ```
 
 ```{r}
+#| fig-cap: "this is my caption"
 ggplot(data = pie_crab, aes(x = latitude, y = size)) +
   geom_point()
+```
+
+```{r}
+summary_crabs <- pie_crab %>% 
+  group_by(site) %>% 
+  summarise(mean_size = round(mean(size), 2),
+            sd_size = round(sd(size),2),
+            count = n())
 ```
